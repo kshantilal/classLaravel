@@ -23,7 +23,8 @@ Route::get('/', function(){
 });
 
 Route::resource('blog', 'BlogController');
-Route::get('admin', 'AdminController@index');
+
+Route::get('admin', 'AdminController@index')->middleware('auth');
 //Contact us Route
 
 Route::get('contact', 'ContactController@index');
